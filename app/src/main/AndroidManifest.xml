@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gerardo.tourapp" >
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".app.UserProfile"
+            android:label="@string/title_activity_user_profile"
+            android:parentActivityName=".app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".app.PlanTour"
+            android:label="@string/title_activity_plan_tour"
+            android:parentActivityName=".app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".app.FindHotel"
+            android:label="@string/title_activity_find_hotel"
+            android:parentActivityName=".app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".app.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".app.MainDetailActivity"
+            android:label="@string/title_activity_detail"
+            android:parentActivityName=".app.MainActivity" >
+        </activity>
+        <activity
+            android:name=".app.ListItemActivity"
+            android:label="@string/title_activity_events_detail"
+            android:parentActivityName=".app.PlanTour" >
+        </activity>
+
+        <activity
+            android:name=".app.DetailActivity"
+            android:label="@string/title_activity_events_main"
+            android:parentActivityName=".app.PlanTour" >
+        </activity>
+
+        <provider
+            android:name=".app.data.ActivityProvider"
+            android:authorities="com.example.gerardo.googletours.app" />
+    </application>
+
+</manifest>
